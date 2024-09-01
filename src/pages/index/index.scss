@@ -1,0 +1,12 @@
+@import '@/assets/mixin.scss';
+.index-container{
+  @include wh(100%, 100%);
+  background-color: #ec5d75;
+
+  position: relative;
+  .title{
+    position: absolute;
+    bottom: 0;
+  }
+
+}

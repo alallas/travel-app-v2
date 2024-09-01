@@ -1,0 +1,105 @@
+@use '@/assets/global/variables' as *;
+@use '@/assets/global/mixins' as *;
+@import '@/assets/mixin.scss';
+
+.user-container{
+  @include wh(100vw, 100vh);
+  scroll-behavior: smooth;
+  .user-header{
+    z-index: 2;
+    overflow: hidden;
+    height: 40%;
+    //background: #3E3473;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 0 40px;
+    .user-back{
+      position: absolute;
+      left: 50px;
+      color: black;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      background: rgba(167, 151, 248, 1);
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .user-show{
+      position: absolute;
+      z-index: 100;
+      .user-avatar{
+        width: 200px;
+        height: 200px;
+      }
+      .user-name{
+        display: flex;
+        flex-direction: column;
+        color: #000;
+        .line-one{
+          display: flex;
+          align-items: center;
+          padding: 20px 0;
+          .nick{
+            font-size: 1.5rem;
+          }
+          .gender{
+            margin-left: 30px;
+            width: 50px;
+            height: 50px;
+          }
+        }
+        .user{
+          padding: 10px 0;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .user-header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.58); /* 调整最后一个参数以控制模糊程度 */
+    backdrop-filter: blur(10px); /* 调整模糊半径 */
+  }
+  .user-water-container{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 40px;
+    .water-part{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .water-item{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+    .water-bottom{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      background-color: transparent;
+      .water-loading{
+        width: 25px;
+        height: 25px;
+        border: 3px solid #ddd;
+        border-radius: 50%;
+        border-bottom: 3px solid #717171;
+        transform: rotate(0deg);
+        animation: loading 1s linear infinite;
+      }
+      .water-all{
+        color: #555555;
+      }
+    }
+  }
+}

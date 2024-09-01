@@ -1,0 +1,36 @@
+@use '@/assets/global/variables' as *;
+@use '@/assets/global/mixins' as *;
+
+
+@mixin add-img-box($width,$height,$bg,$active-bg,$border,$border-radius,$add-direct){
+
+  width: $width;
+  height: $height;
+  position: relative;
+  border-radius: $border-radius;
+  border: $border;
+  background-color: $bg;
+  flex-shrink: 0;
+  @include transition;
+
+  .add-container{
+    @include xy-middle;
+    display: flex;
+    flex-direction: $add-direct;
+    justify-content: center;
+    align-items: center;
+
+    .add-text{
+      font-size: 18px;
+      color: $main-light;
+      padding: 10px;
+      text-align: center;
+      width: 100px;
+    }
+  }
+
+  &:active{
+    background-color: $active-bg;
+  }
+
+}

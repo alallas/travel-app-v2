@@ -1,0 +1,35 @@
+@use '@/assets/global/variables' as *;
+@use '@/assets/global/mixins' as *;
+
+.login-bg{
+  @include bg;
+
+  .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    margin-bottom: 8vh;
+    font-weight: bold;
+    color: $main-dark;
+
+    .title-up{
+      font-size: 40px;
+    }
+    .title-down{
+      font-size: 60px;
+      text-shadow: $text-shadow;
+    }
+  }
+
+  .form{
+    @include form;
+    .btn{
+      margin-top: 100px;
+    }
+  }
+
+  .transfer{
+    @include trans-page;
+  }
+}

@@ -1,0 +1,95 @@
+@use './variables' as *;
+
+// 基础
+
+@mixin full-wh{
+  width: 100%;
+  height: 100%;
+}
+
+@mixin bg{
+  background-image: url("http://m.qpic.cn/psc?/V504HGe00Rgfry4U79uT0Z0BEu0pPKnT/bqQfVz5yrrGYSXMvKr.cqegu4OyJERq45ZQKCPNNhUgSTbRT8sv3V*55Jp5lyy2EFkQxgHFcOMzB2IPO*XEI5VRNt0DSIT*4kuH*iRXmKkg!/b&bo=hgFMAwAAAAADB.o!&rf=viewer_4");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin xy-middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin transition{
+  transition: all 200ms ease-in-out;
+}
+
+@mixin submitBtn($width,$mar-top,$bg-color,$active-color,$box-shadow){
+  display: flex;
+  justify-content: center;
+  width: $width;
+  margin-top: $mar-top;
+  background-color: $bg-color;
+  border-radius: 60px;
+  font-weight: bold;
+  box-shadow: $box-shadow;
+
+  &:active{
+    background-color: $active-color;
+  }
+
+}
+
+
+// 表单
+
+@mixin form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .vant-form-label{
+    color: $main-deep-dark;
+  }
+
+  .form-item{
+    margin: 0;
+    padding: 10px 0;
+    width: 65vw;
+
+    .vant-form-formItem-controll-item{
+      background-color: $white-80;
+      margin: 0;
+      padding: 20px 30px;
+      border-radius: 60px;
+
+      input{
+        width: 100%;
+      }
+    }
+  }
+
+  .btn{
+    @include submitBtn(100%,20px,$main-middle-dark,$main-deep-dark,none)
+  }
+}
+
+
+// 跳转
+
+@mixin trans-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 25px;
+  color: $main-deep-dark;
+
+  .transfer-link{
+    text-decoration: underline;
+  }
+}
+
+

@@ -1,0 +1,48 @@
+$normal-grey:#eee;
+$middle-grey:#ddd;
+$dark-grey:#bbb;
+$deep-dark-grey:#999;
+
+$transparent:rgba(0,0,0,0);
+$white-80:rgba(255,255,255,0.8);
+
+$main-deep-dark:#3E3473;
+$main-middle-dark:#7667C2;
+$main-dark:#5A49AD;
+
+$main-normal:#A797F8;
+$main-light:#B9AAF0;
+$main-normal-50:rgba(167,151,248,0.5);
+
+$box-shadow-color:rgba(134,110,255,0.5);
+$text-shadow-color:#8B1FFF;
+
+
+// 阴影
+$box-shadow: 0 0 40px $box-shadow-color;
+$text-shadow: 0 0 60px $text-shadow-color;
+$list-box-shadow: 0 0 15px $middle-grey;
+
+// 主要页面侧边距
+$sidebar-width:40px;
+
+
+// 减去页面边距，且页面宽度填满
+$full-without-sidebar:calc(100vw - #{$sidebar-width} * 2);
+
+
+// uploader变量
+$bg-primary:#F2F0FF;
+$bg-secondary:#F8F7FF;
+$bg-third:#E4E1FC;
+$grey:#B3B3B3;
+$outline:1px dashed $main-middle-dark;
+$publish-uploder-size:calc((100vw - #{$sidebar-width} * 2) / 3.5);
+
+// 标签颜色
+$orange:#FAAE16;
+$red:#FF4D4F;
+$green:#52C41A;
+
+
+

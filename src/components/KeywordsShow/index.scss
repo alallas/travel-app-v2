@@ -1,0 +1,19 @@
+.keywords-container{
+  .keywords-title{
+    padding: 20px 0;
+  }
+  .keywords-content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -20px;
+    .keywords-box{
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #777676;
+      background: #F2F2F2;
+      margin-right: 40px;
+      padding: 16px;
+      border-radius: 30px;
+    }
+  }
+}

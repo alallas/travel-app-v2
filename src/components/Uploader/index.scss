@@ -1,0 +1,42 @@
+@use '@/assets/global/variables' as *;
+@use '@/assets/global/mixins' as *;
+@use '@/components/AddImgBox/index.scss' as *;
+
+
+@mixin uploader($width,$height,$bg,$active-bg,$border,$border-radius,$add-direct,$delete-pos){
+
+  .add{
+    @include add-img-box($width,$height,$bg,$active-bg,$border,$border-radius,$add-direct);
+  }
+
+  .img-list{
+    display: flex;
+
+    .img-container{
+      position: relative;
+      flex-shrink: 0;
+      margin-right: 15px;
+
+      .img{
+        width: $width;
+        height: $height;
+        border-radius: $border-radius;
+      }
+
+      .delete-icon{
+        position: absolute;
+        top: $delete-pos;
+        right: $delete-pos;
+        background-color: $main-normal-50;
+        backdrop-filter: blur(10px);
+        padding: 5px;
+        border-radius: 50%;
+        @include transition;
+
+        &:active{
+          background-color: $main-deep-dark;
+        }
+      }
+    }
+  }
+}

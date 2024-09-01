@@ -1,0 +1,40 @@
+@use '@/assets/global/variables' as *;
+@use '@/assets/global/mixins' as *;
+
+.edit{
+
+  margin-top: 100px;
+  padding: 0 $sidebar-width;
+
+  .header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4vh;
+
+    .back{
+      position: relative;
+      height: 60px;
+      width: 60px;
+      background-color: $main-normal;
+      border-radius: 50%;
+
+      .back-icon{
+        @include xy-middle;
+      }
+
+    }
+    .title{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      margin-left: -60px;
+      font-size: 40px;
+      font-weight: 600;
+      color: $main-normal;
+    }
+
+
+  }
+
+
+}

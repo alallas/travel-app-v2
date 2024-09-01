@@ -1,0 +1,35 @@
+.waterfall-card{
+  overflow: hidden;
+  box-shadow: 0 0 10px 5px rgba(201, 196, 196, 0.32);
+  border-radius: 20px;
+  .waterfall-info{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    .waterfall-content{
+      font-size: 20px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      padding-bottom: 10px;
+    }
+    .waterfall-user{
+      display: flex;
+      align-items: center;
+      .waterfall-avatar{
+        height: 40px;
+        width: 40px;
+        background-color: rgba(167, 151, 248, 1);
+        border-radius: 40px;
+      }
+      .waterfall-nickname{
+        font-size: 20px;
+        margin-left: 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+}

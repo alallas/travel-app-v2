@@ -1,0 +1,102 @@
+//@import '../mixin.scss';
+//
+//page,
+//body {
+//  font-size: 16px;
+//  height: 100%;
+//  background-color: $bg-color-base;
+//  color: $color-dark;
+//  box-sizing: border-box;
+//}
+//
+//@media screen and (min-width: 500px) {
+//  html,
+//  body {
+//    max-width: 1500px;
+//    margin: 0 auto;
+//    position: relative;
+//  }
+//}
+
+@use './variables' as *;
+
+page,
+view,
+text{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+textarea{
+  width: 100%;
+}
+
+.vant-form-formItem-wrapper,
+.vant-form-formItem{
+  background-color: $transparent !important;
+  margin: 0 !important;
+}
+
+.vant-form-formItem-controll,
+.vant-form-formItem-controll-item{
+  margin: 0 !important;
+}
+
+
+
+.taro-img,
+image {
+  width: 100%;
+}
+
+button {
+  outline: none;
+}
+
+//******常用类******/
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.position-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+}

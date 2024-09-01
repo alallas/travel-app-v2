@@ -1,0 +1,25 @@
+.usercard-container{
+  box-sizing: border-box;
+  height: 180px;
+  width: 100%;
+  box-shadow: 0 0 10px 5px rgba(201, 196, 196, 0.32);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 30px;
+  margin-top: 5px;
+  position: relative;
+  .usercard-img{
+    width: 120px; /* 设置图片的固定宽度 */
+    height: 120px; /* 设置图片的固定高度，与宽度相同 */
+    border-radius: 60px;
+    object-fit: cover; /* 图片尺寸不足时，保持图片比例并填充整个容器 */
+  }
+  .usercard-info{
+    margin-left: 50px;
+  }
+  .usercard-btn{
+    position: absolute;
+    right: 40px;
+  }
+}

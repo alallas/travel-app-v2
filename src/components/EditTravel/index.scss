@@ -1,0 +1,63 @@
+@use '@/assets/global/variables' as *;
+@use '@/assets/global/mixins' as *;
+@use '@/components/Uploader/index.scss' as *;
+
+.cover{
+  .uploader{
+    @include uploader(
+      $full-without-sidebar,
+      130px,
+      $bg-secondary,
+      $bg-primary,
+      $outline,
+      10px,
+      row,
+      20px
+    );
+  }
+}
+.edit-form{
+  margin-top: 10px;
+  .edit-form-item{
+    font-size: 30px;
+    border-bottom: 5px solid $main-normal;
+
+    .vant-form-label{
+      color: $main-dark;
+      font-weight: bold;
+      margin-bottom: 15px;
+      margin-left: -14rpx;
+      font-size: 32px;
+    }
+    .input-text{
+      min-height: 5vh;
+    }
+    .input-content{
+      min-height: 15vh;
+    }
+  }
+
+  .image-list{
+    margin-top: 60px;
+
+    .uploader{
+      @include uploader(
+        $publish-uploder-size,
+        $publish-uploder-size,
+        $bg-primary,
+        $bg-third,
+        none,
+        30px,
+        column,
+        20px
+      );
+    }
+  }
+
+  .btn{
+    @include submitBtn(70vw,5vh,$main-normal,$main-middle-dark,$box-shadow);
+  }
+}
+
+
+

@@ -1,0 +1,34 @@
+@use '@/assets/global/variables' as *;
+@use '@/assets/global/mixins' as *;
+@use '@/components/Uploader/index.scss' as *;
+
+.register-bg{
+  @include bg;
+
+  .uploader{
+    @include uploader(180px,180px,$white-80,$bg-third,none,50%,column,35px);
+  }
+
+  .avatar{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding-top: 5vh;
+  }
+
+  .form{
+    @include form;
+    .form-gender{
+      .vant-form-formItem-controll-item{
+        background-color: $transparent;
+      }
+    }
+  }
+
+  .transfer{
+    @include trans-page;
+  }
+}
+
+
+

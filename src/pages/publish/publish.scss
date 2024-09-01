@@ -1,0 +1,23 @@
+@use '@/assets/global/variables' as *;
+@use '@/assets/global/mixins' as *;
+
+
+.publish-bg{
+  padding: 0 $sidebar-width;
+  @include full-wh;
+
+
+  .header{
+    height: 250px;
+    position: relative;
+    .title{
+      top: 100px;
+      position: absolute;
+      font-size: 2.6rem;
+      text-shadow: $text-shadow;
+      font-weight: 600;
+      color: $main-dark;
+    }
+  }
+
+}

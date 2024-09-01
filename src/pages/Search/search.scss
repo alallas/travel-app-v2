@@ -1,0 +1,87 @@
+@use '@/assets/global/variables' as *;
+@use '@/assets/global/mixins' as *;
+@import '@/assets/mixin.scss';
+
+
+.search-container {
+  @include wh(100vw, 100vh);
+  box-sizing: border-box;
+  //padding: 0 40px;
+  .search-part{
+    height: 120px;
+    padding: 10px 27px 18px;
+    box-shadow: 0 0 10px 5px rgba(201, 196, 196, 0.32);
+  }
+  .search-keywords{
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .drop-menu{
+    height: 100px;
+    padding: 0 60px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px 5px rgba(201, 196, 196, 0.32);
+    font-size: 0.8rem;
+    color: #696767;
+    .van-ellipsis{
+      font-size: 0.8rem;
+      color: #696767;
+    }
+  }
+  .van-tab--active-line{
+    background: $main-middle-dark;
+  }
+  .search-content-travels{
+    //min-height: calc( 100vh - 200px);
+    .water-container{
+      width: 100vw;
+      box-sizing: border-box;
+      padding: 0 40px;
+      .water-part{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .water-item{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+      .water-bottom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        background-color: transparent;
+        .water-loading{
+          width: 25px;
+          height: 25px;
+          border: 3px solid #ddd;
+          border-radius: 50%;
+          border-bottom: 3px solid #717171;
+          transform: rotate(0deg);
+          animation: loading 1s linear infinite;
+        }
+        .water-all{
+          color: #555555;
+        }
+      }
+    }
+  }
+  .usercard-part{
+    min-height: calc( 100vh - 200px);
+    margin-top: 10px;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  //.search-result{
+  //  padding-top: 5px;
+  //  height: calc( 100vh - 125px );
+  //}
+}
